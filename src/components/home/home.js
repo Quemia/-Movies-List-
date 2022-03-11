@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "../api/api";
 import Card from "../card/card";
 import Navbar from "../navbar/navbar";
+import Input from "../input/input";
 import { ContainerCard, TitlePage } from "./home.style.js";
 
 const Home = () => {
@@ -23,7 +24,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <TitlePage>Ghibli Studios</TitlePage>
+      <Input />
       <ContainerCard>
         {movies.map((movie) => (
           <Card movie={movie} />
