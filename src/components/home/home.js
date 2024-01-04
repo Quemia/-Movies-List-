@@ -3,28 +3,26 @@ import api from "../api/api";
 import Card from "../card/card";
 import Navbar from "../navbar/navbar";
 import Input from "../input/input";
-import { ContainerCard, TitlePage } from "./home.style.js";
+import { ContainerCard } from "./home.style.js";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    api
-      .get("/films")
-      .then((res) => {
-        setMovies(res.data);
-      })
-      .catch((err) => {
-        console.log("Error detected: " + err);
-      });
-  }, []);
+  const getApiData = async () => {
+    const responseData = await api.get("https://ghibliapi.dev/films");
+    setMovies(responseData.data);
+    console.log(responseData);
+  };
 
-  console.log(movies);
+  useEffect(() => {
+    getApiData();
+  }, []);
 
   return (
     <>
       <Navbar />
       <Input />
+
       <ContainerCard>
         {movies.map((movie) => (
           <Card movie={movie} />

@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
-  background-color: rgb(26 140 255);
-  background: linear-gradient(to top left, #8ec6ff, #0f2998);
-
+  background-color: #47a3ff9c;
   width: 100%;
   height: 100px;
 
@@ -12,15 +10,11 @@ export const NavbarContainer = styled.div`
   align-items: center;
 `;
 
-export const TitlePage = styled.h1`
-  margin: 0 25px;
-
-  font-family: "Amatic SC", "Arima Madurai", "Amaranth";
-  font-weight: normal;
-  font-size: 50px;
-  color: #fff;
-
-  cursor: pointer;
+export const ImageLogo = styled.div`
+  background-image:url("logo_St.png") ;
+  margin: 7px 34px; 
+  width : 167px ;
+  height: 87px;
 
   @media (max-width: 523px) {
     font-size: 30px;
@@ -31,17 +25,12 @@ export const TitlePage = styled.h1`
 
 export const ModeText = styled.h3`
   margin: 0 25px;
-
-  font-family: "Amatic SC", "Arima Madurai", "Amaranth";
-  font-weight: 600;
   font-size: 30px;
-  color: #fff;
-
+  color: #000;
   cursor: pointer;
 
   @media (max-width: 523px) {
     font-size: 25px;
-
     margin: 0 15px;
   }
 `;

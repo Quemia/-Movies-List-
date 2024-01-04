@@ -9,9 +9,7 @@ export const ContainerCard = styled.div`
 export const TitlePage = styled.h1`
   margin: 0 auto;
   padding-top: 30px;
+  font: normal 400 50px/40px "Amaranth";
   text-align: center;
-  font-family: "Amaranth";
-  font-weight: normal;
-  font-size: 50px;
   color: #fff;
 `;
