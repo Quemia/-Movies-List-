@@ -4,7 +4,7 @@ import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { MdOutlineFavorite } from "react-icons/md";
 import Navbar from "../navbar/navbar";
 import { IoReturnDownBackOutline } from "react-icons/io5";
-import api from "../api/api";
+import api from "../../api/api";
 import { movieHash } from "../card/card.js";
 import {
   BackButton,

@@ -11,7 +11,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const ImageLogo = styled.div`
-  background-image:url("logo_St.png") ;
+  background-image:url("logo_St.png");
   margin: 7px 34px; 
   width : 167px ;
   height: 87px;
