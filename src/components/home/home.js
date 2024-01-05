@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
 import api from "../../api/api";
-// import useService from "../../api/api";
 import Card from "../card/card";
-import Navbar from "../navbar/navbar";
-import { IoIosSearch } from "react-icons/io";
+import { CgDarkMode } from "react-icons/cg";
+import themes from "../../styles/themes/index.js";
 import {
+  Container,
   ContainerCard,
   InputContent,
-  ButtonSearch,
   Content,
-  Icon,
+  NavbarContainer,
+  ImageLogo,
+  ModeText,
 } from "./home.style.js";
-
-const MoviersProps = {
-  title: String,
-};
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
-
   const getApiData = async () => {
     const responseData = await api.get("https://ghibliapi.dev/films");
     setMovies(responseData.data);
@@ -29,12 +25,32 @@ const Home = () => {
     getApiData();
   }, []);
 
-  const searchLowerCase = search.toLocaleLowerCase(); 
+  // ----------- Search Movies
 
-  const Films = movies.filter((film) => film.title.toLocaleLowerCase().includes(searchLowerCase));
+  const searchLowerCase = search.toLocaleLowerCase();
+
+  const Films = movies.filter((film) =>
+    film.title.toLocaleLowerCase().includes(searchLowerCase)
+  );
+
+  // ----------- Change Theme
+
+  const [theme, setTheme] = useState("light");
+
+  const handleChangeTheme = () => {
+    setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
+  };
+
+  const themeColor = theme;
+
   return (
-    <>
-      <Navbar />
+    <Container theme={themes[theme]}>
+      <NavbarContainer theme={themes[theme]}>
+        <ImageLogo theme={themes[theme]} />
+        <ModeText theme={themes[theme]} onClick={() => handleChangeTheme()}>
+          <CgDarkMode />
+        </ModeText>
+      </NavbarContainer>
       <Content>
         <InputContent
           type="text"
@@ -45,10 +61,10 @@ const Home = () => {
       </Content>
       <ContainerCard>
         {Films.map((movie) => (
-          <Card movie={movie} />
+          <Card movie={movie} theme={themes[theme]} themeColor={themeColor} />
         ))}
       </ContainerCard>
-    </>
+    </Container>
   );
 };
 

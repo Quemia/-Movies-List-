@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const DescriptionContainer = styled.div`
-  margin: 30px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
+  background-color: ${({ theme }) => theme.color.backgroundPage};
+
+  /* backgroundPage */
+
   @media (max-width: 900px) {
     display: block;
   }
@@ -43,7 +46,7 @@ export const Informations = styled.div`
 `;
 
 export const TitleMovie = styled.h2`
-  color: #000;
+  color: ${({ theme }) => theme.color.CardColorText};
   font: normal 700 30px/40px "Roboto";
 
   @media (max-width: 523px) {
@@ -52,12 +55,12 @@ export const TitleMovie = styled.h2`
 `;
 
 export const OriginalTitleMovie = styled.h3`
-  color: #000;
+  color: ${({ theme }) => theme.color.CardColorText};
   font: normal 400 25px/15px "Roboto";
 `;
 
 export const DescriptionMovie = styled.p`
-  color: #000;
+  color: ${({ theme }) => theme.color.CardColorText};
   font: normal 400 20px/30px "Roboto";
 `;
 
@@ -65,7 +68,7 @@ export const BackButton = styled.button`
   background-color: transparent;
   border: transparent;
 
-  color: #000;
+  color: ${({ theme }) => theme.color.CardColorText};
   cursor: pointer;
   font-size: 35px;
 `;

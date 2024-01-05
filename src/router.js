@@ -8,7 +8,11 @@ export default function RoutesApp() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/description/:cover_movie" exact element={<Description/>}/>
+        <Route
+          path="/description/:themeColor/:cover_movie"
+          exact
+          element={<Description />}
+        />
       </Routes>
     </BrowserRouter>
   );

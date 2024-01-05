@@ -4,10 +4,10 @@ export const Container = styled.div`
   margin: 30px 10px;
   width: 220px;
   padding: 5px;
-  background-color: #47a3ff9c;
+  /* background-color: #000; */
+  background-color: ${({ theme }) => theme.color.CardColor};
   border: none;
   border-radius: 8px;
- 
 `;
 
 export const CardBaner = styled.img`
@@ -22,21 +22,18 @@ export const CardBaner = styled.img`
 
 export const CardTitle = styled.h2`
   margin: 3px 10px;
-  color: #000;
+  color: ${({ theme }) => theme.color.CardColorText};
   font: normal 400 1.5em/30px "Amaranth";
-
 `;
 
 export const CardOriginalTitleRomanised = styled.h3`
-  margin: 10px 10px 2px;;
-  color: #000;
+  margin: 10px 10px 2px;
+  color: ${({ theme }) => theme.color.CardColorText};
   font: normal 400 1.17em/20px "Amaranth";
 `;
 
 export const CardOriginalTitle = styled.h5`
   margin: 10px 10px 5px;
-  color: #000;
-  font: normal 400 .83em/20px "Amaranth";
-
-
+  color:  ${({ theme }) => theme.color.CardColorText};
+  font: normal 400 .83em/10px "Amaranth";
 `;

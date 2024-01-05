@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import RoutesApp from "./router";
-import styled from "styled-components";
-
-const AppContainer = styled.div`
-  margin: -8px;
-  padding: 0;
-`;
+import styled, { ThemeProvider } from "styled-components";
+import themes from "./styles/themes";
+import { AppContainer } from "../src/styles/globalStyles";
+import Navbar from "./components/navbar/navbar";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+
+  // theme={themes[Themedefault]}
   return (
-    <AppContainer>
-      <RoutesApp />
-    </AppContainer>
+    <ThemeProvider theme={themes[theme]}>
+      <AppContainer>
+        <RoutesApp />
+      </AppContainer>
+    </ThemeProvider>
   );
 }
 
