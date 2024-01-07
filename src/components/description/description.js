@@ -16,6 +16,7 @@ import {
   Informations,
   LikeButton,
   ImagemDiv,
+  ContentDescription,
 } from "./description.style.js";
 import Navbar from "../navbar/navbar.js";
 
@@ -37,14 +38,10 @@ const Description = () => {
     getApiData();
   }, []);
 
-  console.log(themes[themeColor]);
-
-  // const theme =  themeColor;
-
   const { title, original_title, image, description } = movieDesc;
 
   return (
-    <>
+    <ContentDescription theme={themes[themeColor]}>
       <Navbar theme={themeColor} />
       <DescriptionContainer theme={themes[themeColor]}>
         <ImagemDiv>
@@ -60,18 +57,18 @@ const Description = () => {
             {description}
           </DescriptionMovie>
 
-          <Link to={"/"}>
+          <Link to={`/${themeColor}`}>
             <BackButton theme={themes[themeColor]}>
               <IoReturnDownBackOutline />
             </BackButton>
           </Link>
-          <LikeButton>
+          <LikeButton theme={themes[themeColor]}>
             <MdOutlineFavoriteBorder />
             {/* <MdOutlineFavorite /> */}
           </LikeButton>
         </Informations>
       </DescriptionContainer>
-    </>
+    </ContentDescription>
   );
 };
 

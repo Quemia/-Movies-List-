@@ -24,6 +24,8 @@ export const CardTitle = styled.h2`
   margin: 3px 10px;
   color: ${({ theme }) => theme.color.CardColorText};
   font: normal 400 1.5em/30px "Amaranth";
+
+  
 `;
 
 export const CardOriginalTitleRomanised = styled.h3`

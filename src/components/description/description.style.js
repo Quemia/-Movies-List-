@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-export const DescriptionContainer = styled.div`
-  padding: 50px 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+export const ContentDescription = styled.div`
   background-color: ${({ theme }) => theme.color.backgroundPage};
 
-  /* backgroundPage */
+  height: 100vh;
+  padding: 0;
+`;
+
+export const DescriptionContainer = styled.div`
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: ${({ theme }) => theme.color.backgroundPage};
 
   @media (max-width: 900px) {
     display: block;
@@ -16,7 +21,6 @@ export const DescriptionContainer = styled.div`
 
 export const ImagemDiv = styled.div`
   display: block;
-  width: 70%;
   margin: 20px 0px 20px 100px;
 
   @media (max-width: 900px) {
@@ -76,7 +80,8 @@ export const BackButton = styled.button`
 export const LikeButton = styled.button`
   font-size: 35px;
   margin-left: 15px;
-  color: #47a3ff9c;
+  color: ${({ theme }) => theme.color.like};
+
   cursor: pointer;
 
   background-color: transparent;

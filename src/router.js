@@ -8,6 +8,7 @@ export default function RoutesApp() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home />} />
+        <Route path="/:Color" exact element={<Home />} />
         <Route
           path="/description/:themeColor/:cover_movie"
           exact

@@ -3,6 +3,7 @@ export default {
   color: {
     backgroundPage: "#fff",
     backgroundNavbar: "#47a3ff9c",
+    like: "#47a3ff9c",
     CardColor: "#47a3ff9c",
     CardColorText: "#000",
     colorNavbar: "#000",
@@ -14,5 +15,6 @@ export default {
   },
   image: {
     logo: "../logo_St.png",
+    logoNav: "../logo_St_2.png",
   },
 };

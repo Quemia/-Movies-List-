@@ -10,6 +10,20 @@ export const NavbarContainer = styled.div`
   align-items: center;
 `;
 
+export const ImageLogo = styled.div`
+  background-image: url("${({ theme }) => theme.image.logoNav}");
+  background-repeat: no-repeat;
+  margin: 7px 34px;
+  width: ${({ theme }) => theme.width.logoWidth};
+  height: 87px;
+
+  @media (max-width: 523px) {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 15px;
+  }
+`;
+
 export const ModeText = styled.button`
   background-color: transparent;
   border: transparent;
