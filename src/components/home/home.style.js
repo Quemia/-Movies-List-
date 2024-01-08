@@ -20,7 +20,13 @@ export const TitlePage = styled.h1`
 
 export const Content = styled.div`
   display: flex;
-  align-items: baseline;
+  justify-content: left;
+  margin-left: 35px;
+
+  @media (max-width: 523px) {
+    justify-content: center;
+    margin-left: 0;
+  }
 `;
 
 export const InputContent = styled.input`
@@ -42,9 +48,7 @@ export const InputContent = styled.input`
   }
 
   @media (max-width: 523px) {
-    width: 200px;
-    height: 35px;
-    margin: 60px 10px 0;
+    width: 70%;
   }
 `;
 

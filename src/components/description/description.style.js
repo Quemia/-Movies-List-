@@ -54,7 +54,7 @@ export const TitleMovie = styled.h2`
   font: normal 700 30px/40px "Roboto";
 
   @media (max-width: 523px) {
-    font: normal 700 25px/15px "Roboto";
+    font: normal 700 25px/35px "Roboto";
   }
 `;
 
