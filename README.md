@@ -3,10 +3,9 @@
 Simple studio ghibli movie listing app.
 
   <!-- :point_right: -->
- :point_right: **[Movie-List](https://movie-ghibli-list-xi.vercel.app/)**
+  Project deployment :point_right: **[Movie-List](https://movie-ghibli-list-xi.vercel.app/)**
  
-
-  ![Movie-list](https://github.com/Quemia/Movies-List/assets/55935949/821d931f-0eb5-4ead-9e46-653ea3854311.gif) 
+  (![Movie-list](https://github.com/Quemia/Movies-List/assets/55935949/168801b1-6d14-4804-bc1b-1cc1f3b5cde2)
 
 
 ## 🚀 Getting Started
