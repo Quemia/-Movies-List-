@@ -3,9 +3,9 @@
 Simple studio ghibli movie listing app.
 
   <!-- :point_right: -->
- **[Movie-List](https://movie-ghibli-list-xi.vercel.app/)**
+ :point_right: **[Movie-List](https://movie-ghibli-list-xi.vercel.app/)**
 
- <!-- ![memoryGame (1)](https://user-images.githubusercontent.com/55935949/140444236-4d78007f-0a16-48aa-8b0b-6ea174d5556c.gif) -->
+  ![Movie-list](https://user-images.githubusercontent.com/55935949/140444236-4d78007f-0a16-48aa-8b0b-6ea174d5556c.gif) 
 
 ## 🚀 Getting Started
 
