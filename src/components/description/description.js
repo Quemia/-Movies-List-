@@ -19,11 +19,15 @@ import {
   ContentDescription,
 } from "./description.style.js";
 import Navbar from "../navbar/navbar.js";
+import { ThemeContext } from "../home/home.js";
 
 const Description = () => {
   const [movieDesc, setMovieDesc] = useState([]);
   const { cover_movie } = useParams();
   const { themeColor } = useParams();
+
+  const value = React.useContext(ThemeContext);
+  console.log("---  ", value)
 
   const getApiData = async () => {
     const responseData = await api.get("https://ghibliapi.dev/films");

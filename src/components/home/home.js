@@ -15,6 +15,8 @@ import {
   ModeText,
 } from "./home.style.js";
 
+export const ThemeContext = React.createContext();
+
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
@@ -46,7 +48,8 @@ const Home = () => {
   let themeColor = theme;
 
   return (
-    <ThemeProvider theme={themes[theme]}>
+    <ThemeContext.Provider value="theme">
+      {/* <ThemeProvider theme={themes[theme]}> */}
       <Container theme={themes[theme]}>
         <NavbarContainer theme={themes[theme]}>
           <ImageLogo theme={themes[theme]} />
@@ -68,7 +71,8 @@ const Home = () => {
           ))}
         </ContainerCard>
       </Container>
-    </ThemeProvider>
+      {/* </ThemeProvider> */}
+    </ThemeContext.Provider>
   );
 };
 
